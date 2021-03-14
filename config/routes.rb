@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  resources :users
-
-  resources :listings
-
-  resources :neighborhoods
-
-  resources :cities
-
+  
+  resources :users, only: [:new, :create, :show, :edit, :update]
+  
+  resources :listings, only: [:new, :create, :show, :edit, :update]
+  
+  resources :neighborhoods, only: [:new, :create, :show, :edit, :update]
+  
+  resources :cities, only: [:new, :create, :show, :edit, :update]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
